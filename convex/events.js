@@ -39,7 +39,7 @@ export const createEvent = mutation({
       const defaultColor = "#1e3a8a";
 
       // SERVER-SIDE CHECK: Verify event limit for Free users
-      if (!hasPro && user.freeEventsCreated >= 1) {
+      if (!hasPro && user.freeEventsCreated >= 5) {
         throw new Error(
           "Free event limit reached. Please upgrade to Pro to create more events."
         );
